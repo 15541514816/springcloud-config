@@ -1,24 +1,2 @@
-server:
-  port: 3344
-  
-spring:
-  application:
-    name: cloud-config-server  #注册进Eureka 服务器的微服务名
-  cloud: 
-    config: 
-      server: 
-        git:
-          uri: https://github.com/15541514816/springcloud-config.git  #github  上 git仓库名称
-          ###搜索目录
-          search-paths:
-            - springcloud-config
-        ###读取分支
-      label: master
-
-eureka:
-  client: 
-    serviceUrl:
-      #设置与Eureka Server交互的地址查询服务和注册服务都需要依赖这个地址
-      #defaultZone: http://localhost:7001/eureka/
-      defaultZone: http://eureka7001.com:7001/eureka/
-      #集群版
+config:
+    info: "master branch,springcloud-config/application-dev.yml version=1"
